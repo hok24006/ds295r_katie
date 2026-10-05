@@ -1,0 +1,3 @@
+In regards to ethics about Artificial Inteligence usage:
+
+Artificial Inteligence is a way to recieve information, but it also can be used to create untrue information. While using AI, it is important to keep in mind the amount of things that it can do, and to direct it in a way that you are wanting it to be used in. Don't be afraid to keep nagging it to make sure that it stays on track for what you are needing it for - which should mostly be for education or clarification.

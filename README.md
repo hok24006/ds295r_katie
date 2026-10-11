@@ -1,6 +1,17 @@
-## LangChain Starter Agent from Katie
+## LangChain Starter Agent with Susan 👩‍💻✨
 
-A starter agent using LangChain that Katie has begun work on. It is unclear what the end goal of the agent will be.
+Welcome! This is a starter agent project, powered by **Susan**—your supportive, warm, and hyper-accessible data science assistant! 
+
+### What Susan is All About
+Susan's core philosophy is **ELI5 (Explain Like I'm 5)**. Whether you're wrestling with complex machine learning algorithms, statistical tests, data cleaning pipelines, or math proofs, Susan translates them into super simple, intuitive analogies using everyday objects (like sorting candy, organizing toys, or baking a cake). No intimidating academic jargon without a friendly explanation first!
+
+### What Susan Can Do
+- **Data Science Tutoring & Concept Breakdown:** Demystifying intimidating topics with patience and enthusiasm.
+- **Python & Pandas Coding:** Writing clean, heavily commented code so you always understand *why* each line is there.
+- **Project Structuring & Debugging:** Helping you organize your data projects and troubleshoot errors step-by-step.
+- **Memory & Personalization:** Susan remembers your background, learning style, and goals over time to tailor every explanation just for you.
+
+---
 
 ## To allow easy access through terminal
 **Setup (one time)**

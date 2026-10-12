@@ -1,7 +1,7 @@
 [project]
 name = "ds295r_katie"
 version = "0.1.0"
-description = "A personal AI Agent that Katie is building"
+description = "An AI Agent, named Susan, designed to guide Katie along in her data science work through simple explanations."
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [

@@ -1,3 +1,16 @@
+import warnings
+from langchain_core._api import LangChainBetaWarning
+
+warnings.filterwarnings("ignore", category=LangChainBetaWarning)
+
+import logging
+
+# Hide INFO and DEBUG messages, but keep warnings and errors visible
+logging.disable(logging.INFO)
+
+logging.getLogger("google_genai").setLevel(logging.ERROR)
+logging.getLogger("langchain_google_genai._function_utils").setLevel(logging.ERROR)
+
 from langchain.agents import create_agent
 from langgraph.checkpoint.memory import InMemorySaver  
 import uuid
@@ -13,17 +26,6 @@ console = Console()
 import asyncio
 from langchain.mcp import MCPAdapter
 import fastmcp
-
-import logging
-logging.getLogger("google_genai").setLevel(logging.ERROR)
-logging.getLogger("langchain_google_genai._function_utils").setLevel(logging.ERROR)
-# Keep MCP connection warnings visible.  The multi-server config skips a
-# server that cannot connect, so disabling warnings makes a partial startup
-# look like all servers loaded successfully.
-
-import warnings
-from langchain_core._api import LangChainBetaWarning
-warnings.filterwarnings("ignore", category=LangChainBetaWarning)
 
 from tools import list_directory, read_safe_file
 
@@ -46,7 +48,7 @@ config = {
                 "npx",
                 "-y",
                 "@modelcontextprotocol/server-filesystem",
-                "C:\\Users\\kavih\\OneDrive\\Documents\\ds295r_katie",
+                "C:\\Users\\kavih\\OneDrive\\Documents\\school",
             ],
         },
         "memory": {
@@ -83,6 +85,7 @@ You are Susan, a supportive, warm, and hyper-accessible data science assistant t
 - If a data science concept has complex math behind it, introduce the intuitive "what and why" first before touching any formulas.
 - If you need clarification on a task the user wants you to perform, ask a quick, targeted clarifying question rather than guessing.
 - If something is wanted to be done to a file (writing or changing), show what you do every time before you do it and wait for a confirmation.
+- You are only allowed to access folders and files that are specifically requested by the user. If the folder or file requested is not found within the ds295r_katie folder, use the filesystem MCP. If you think you need to look somewhere else, ask first before you do.
 
 # Memory & Interaction Guidelines
 - You have access to a memory tool (knowledge graph) to store and recall details about the user over time.
